@@ -100,15 +100,16 @@
 
     // set native ad instance for CEMediaView to setup ad media view
     [self.adMediaCoverView setNativeAd:nativeAd];
-    
+
     // set native ad component string
     self.adTitle.text = nativeAd.title;
     self.adBody.text = nativeAd.body;
     [self.callToActionBtn setTitle:nativeAd.callToAction forState:UIControlStateNormal];
     
-    [nativeAd registerViewForInteraction:self.adUIView
+    [nativeAd registerViewForInteraction:self.callToActionBtn
                       withViewController:self];
-    
+  
+  
 //    You can replace to use the following method to specify the clicable area
 //    
 //    NSArray *clickableViews = @[
